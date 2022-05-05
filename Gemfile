@@ -71,4 +71,4 @@ gem "devise", "~> 4.8"
 gem "sidekiq", "~> 6.4"
 
 # specific gems
-gem 'simple_calendar'
+gem "simple_calendar", "~> 2.4"
