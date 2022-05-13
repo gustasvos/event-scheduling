@@ -1,14 +1,7 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Meetings</h1>
-
-<div id="meetings">
-  <% @meetings.each do |meeting| %>
-    <%= render meeting %>
-    <p>
-      <%= link_to "Show this meeting", meeting %>
-    </p>
+<div class="container m-auto my-4">
+  <% unless current_user.meetings.any? %>
+    <%= render "meetings_cta" %>
+  <% else %>
+    <%= render "meetings_landing", meetings: @meetings %>
   <% end %>
 </div>
-
-<%= link_to "New meeting", new_meeting_path %>
