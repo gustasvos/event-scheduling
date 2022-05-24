@@ -6,7 +6,7 @@
         </div>
 
         <% if author_of(comment) %>
-            <%=  link_to "Delete", meeting_comment_path(comment.meeting, comment), method: :delete, data: { confirm: "are you sure?" }, class: "btn btn-destroy" %>
+            <%= button_to "Delete", meeting_comment_path(comment.meeting, comment), method: :delete, class: "btn btn-danger" %>
         <% end %>
     </div>
 </div>

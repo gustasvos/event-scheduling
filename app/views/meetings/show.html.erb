@@ -3,7 +3,6 @@
 
     <div class="flex flex-wrap justify-between items-center mb-5">
       <h1><%= @meeting.name %></h1>
-      <%= link_to "Cancel Meeting", meeting_path(@meeting), method: :delete, data: { confirm: "Are you sure?" } %>
     </div>
 
     <div class="border p-6 bg-grey-lighter mb-5 flex items-center justify-between">
@@ -15,7 +14,14 @@
       <p class="border-2 py-3 px-4 border-indigo rounded-full text-sm text-indigo">
         End Time: <span><%= readable_time(@meeting.end_time)%></span>
       </p>
+      <%= button_to "Cancel Meeting", meeting_path(@meeting), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger" %>
+      <%= link_to "Edit meeting", edit_meeting_path(@meeting), class:"btn btn-primary" %>
     </div>
+
+    <%# USAR RENDER PRA COLOCAR OS COMENTARIOS %>
+    <%# FAZER A CLASSE DOS COMENTARIOS %>
+
+  
 
     <h4>Comments</h4>
     <hr class="border" />
@@ -30,6 +36,8 @@
     <% end %>
 
     <div id="comments">
-      <%#= render @meeting.comments %>
+      <%= render @meeting.comments %>
     </div>
 </div>
+
+<%console%>

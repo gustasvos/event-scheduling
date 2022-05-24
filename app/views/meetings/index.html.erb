@@ -2,6 +2,6 @@
   <% unless current_user.meetings.any? %>
     <%= render "meetings_cta" %>
   <% else %>
-    <%= render "meetings_landing", meetings: @meetings %>
+    <%= render "meetings_calendar", meetings: @meetings %>
   <% end %>
 </div>

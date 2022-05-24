@@ -1,0 +1,12 @@
+<div class="bg-white p-10 border rounded">
+    <div id="calendar" class="tab-panel active">
+        <h2>Meeting calendar</h2>
+        <div id="meeting-calendar">
+            <%= render "calendar",  meetings: meetings %>
+        </div>
+    </div>
+
+    <div>
+        <%= link_to "New meeting", new_meeting_path%>
+    </div>
+</div>
