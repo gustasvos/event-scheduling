@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
     before_action :authenticate_user!
-    before_action :set_comment, only: [:create, :destroy]
+    # before_action :set_comment, only: [:create, :destroy]
     before_action :set_meeting
 
     def new
@@ -27,15 +27,6 @@ class CommentsController < ApplicationController
         @comment.destroy
         redirect_to meeting_path(@meeting)
     end
-    # def destroy
-    #     @comment = @meeting.comments.find(params[:id])
-    #     @comment.destroy
-        
-    #     respond_to do |format|
-    #         format.html { redirect_to comments_url, notice: "Comment was successfully destroyed." }
-    #         format.json { head :no_content }
-    #     end
-    # end
 
     private
 
